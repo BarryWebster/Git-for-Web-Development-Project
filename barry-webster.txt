@@ -104,16 +104,49 @@ Link to finished codepen: https://codepen.io/barryrupertwebster/pen/vYZLRmx
     You should use version control because it keeps track of changes and keeps every member of your team working on the latest version of a project.
 
     35. How often should I commit to github?
-    Whenever you add a new feature that's woth committing.
+    Whenever you add a new feature that's worth committing.
 
     36. What is the command we would use to push our repo up to github? 
+    git push -u origin branch-name or git push if the branch name has already been added.
+
     37. Walk me through Lambda's git flow. 
+    Step 1 - Create your own version of the repository (aka repo) by forking it in GitHub
+	Step 2 - Check to see if your name is in front of the repo name
+	Step 3 - Clone your repo using githubs ‘clone or download’ button
+    Step 4 - In your terminal, use the cd command to go to the the directory where you are going to want to clone your forked Repo
+    Step 5 - Use the git clone with the copy/pasted link command to clone the repo to the directory you are currently in.
+    Step 6 cd into the newly created repo using the cd <repo-name> command
+    Step 7 Use the git checkout -b 'firstname-lastname' command to create your own branch name for the repo (this is the branch that you will be doing your work on)
+    Step 8 Now you can work on your repo and start getting the project assignment done.
+    Step 9 To add and commit changes on your branch, do the following in Terminal:
+    Type git add . - this will add the repo changes and make them ready for committing. 
+    Then type git commit -m "Your helpful commit message here" - this will commit the changes with your specified commit message (commit message should explain what changes you've added to the repo that you are committing)
+    Step 10 To push your changes back up to your Github repo, in Terminal:
+    Type git push -u origin branch-name which will push all of your commits from your local machine up onto github
+    Step 11 After changes have been made on github you can now submit a Pull Request
+    Step 12 Go back to your forked Project repo on github (make sure you are on your forked copy and not the original Lambda one)
+    Step 13 Click on the Branch:master button on the left side. This will create a dropdown where you should be able to select your name-branch 
+    Step 14 Click your name-branch and then click the New pull request button to make a pull request on your name branch
+    Step 15 After you click new pull request it should redirect you to the pull request page
+    Step 16 When you get to the Pull Request page, make sure to click the dropdown button that says base repository and change it to be your forked repo instead of the original Lambda repo.
+    Step 17 When the above step is complete, click on pull request
+    Step 18 Copy the Url link in the address bar and paste it into canvas.
 
 Stretch Review questions: 
 1. What is the difference between an inline element and a block element? 
-An inline element can have content on its left and right side. It only takes as much width as necessary. Multiple inline elements can exist on the same line if there’s space. A block element cannot have content on its left or right side. It fills the entire line from left to right taking up the entire width of the page if the width is not specified.
+An inline element can have content on its left and right side. It only takes as much width as necessary. Multiple inline elements can exist on the same line if there’s space. A block element cannot have content on its left or right side. It fills the entire line from left 
+to right taking up the entire width of the page if the width is not specified.
 
 2. What happens when an element is positioned absolutely? 
+An element no longer exists in the normal document flow. Instead, it sits on its own layer separate from everything else.
+
 3. How do I make an element take up only the amount of space it needs but also have the ability to give it a width? 
+display: inline-block
+
 4. Name 3 elements that are display block by default, 2 elements that are display inline by default, and 1 element that is display inline-block by default 
+display: block - Example: <div>,< h1> and <p>
+display: inline - Example: <a> and <span>
+display: inline-block - Example: <img>
+
 5. In your own words, explain the box model. What is the fix for the box model? Stretch Git Tasks
+The box model defines the dimensions and structure of an element. The model consists of 4 parts: the content, padding surrounding the content, the border surrounding the padding and the margin (space outside the border). The fix for the  model is box-sizing: border-box. It tells the browser to account for any border and padding in the values you specify for an element's width and height.
